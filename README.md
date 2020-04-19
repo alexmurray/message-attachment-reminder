@@ -29,11 +29,19 @@ To enable then simply add the following to your init file:
 (require 'message-attachment-reminder)
 ```
 
+Or is you use [`use-package`](https://github.com/jwiegley/use-package) this
+can be simplified to:
+
+```emacs-lisp
+(use-package mesage-attachment-reminder
+  :ensure t)
+```
+
 ### Manual
 
 If you would like to install the package manually, download or clone it and
-place within Emacs' `load-path`, then you can require it in your init file like
-this:
+place within Emacs' `load-path`, then you can require it in your init file
+like this:
 
 ```emacs-lisp
 (require 'message-attachment-reminder)
