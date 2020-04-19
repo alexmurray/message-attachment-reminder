@@ -86,7 +86,7 @@ displayed to the user."
     (save-restriction
       (widen)
       (goto-char (point-min))
-      (search-forward "<#part" nil t))))
+      (when (search-forward "<#part" nil t) t))))
 
 (defun message-attachment-reminder-attachment-expected-p ()
   "Find if an attachment is expected in the current message, returning matched text."
