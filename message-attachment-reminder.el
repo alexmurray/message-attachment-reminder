@@ -52,16 +52,24 @@
   :group 'message-send)
 
 (defcustom message-attachment-reminder-regexp
-  (regexp-opt '("Attached is"
-                "Attached you will find"
-                "Attached you will see"
+  (regexp-opt '("attached is"
+                "attached you will find"
+                "attached you will see"
                 "I have attached"
                 "I've attached"
-                "Find attached"
-                "See attached"
-                "See attachment"
-                "See the attachment"
-                "See the attached"))
+                "find attached"
+                "see attached"
+                "see attachment"
+                "see the attachment"
+                "see the attached"
+                "enclosed is"
+                "enclosed you will find"
+                "enclosed you will see"
+                "I have enclosed"
+                "I've enclosed"
+                "find enclosed"
+                "see enclosed"
+                "see the enclosed"))
   "Regular expression to match possible attachment reminder hints.
 When found in the composed message and there are no attachments
 present, will cause `message-attachment-reminder-warning' to be
@@ -70,7 +78,7 @@ displayed to the user."
   :group 'message-attachment-reminder)
 
 (defcustom message-attachment-reminder-warning
-  "This message contains '%s' but appears to be missing an attachment, are you sure you want to send it? "
+  "This message contains '%s' but has no attachment, send it anyway? "
   "Warning message displayed with matched hint to user on missing attachments."
   :type 'string
   :group 'message-attachment-reminder)
@@ -94,7 +102,8 @@ displayed to the user."
     (save-restriction
         (widen)
         (message-goto-body)
-        (let ((hint))
+        (let ((case-fold-search t)
+              (hint))
           (while (and (null hint)
                       (re-search-forward message-attachment-reminder-regexp nil t)
                       (or (null message-attachment-reminder-exclude-quoted)
