@@ -33,7 +33,7 @@ Or is you use [`use-package`](https://github.com/jwiegley/use-package) this
 can be simplified to:
 
 ```emacs-lisp
-(use-package mesage-attachment-reminder
+(use-package message-attachment-reminder
   :ensure t)
 ```
 
