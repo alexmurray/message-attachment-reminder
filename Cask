@@ -5,7 +5,7 @@
 
 (package-file "message-attachment-reminder.el")
 
-(files "*.el")
+(files "message-attachment-reminder.el")
 
 (development
   (depends-on "ert-runner"))
