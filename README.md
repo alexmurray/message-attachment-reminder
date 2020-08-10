@@ -2,7 +2,7 @@
 
 [![License GPL 3](https://img.shields.io/badge/license-GPL_3-green.svg)](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![MELPA](http://melpa.org/packages/message-attachment-reminder-badge.svg)](http://melpa.org/#/message-attachment-reminder)
-[![Build Status](https://travis-ci.org/alexmurray/message-attachment-reminder.svg?branch=master)](https://travis-ci.org/alexmurray/message-attachment-reminder)
+![CI](https://github.com/alexmurray/message-attachment-reminder/workflows/CI/badge.svg)
 
 Warns the user if they try and send an email without an attachment when
 they body text contains language that suggests an attachment should be
