@@ -17,7 +17,7 @@ has been cleaned up and made into a dedicated package.
 
 ## Installation
 
-### MELPA (coming soon...)
+### MELPA
 
 The preferred way to install `message-attachment-reminder` is via
 [MELPA](http://melpa.org) - then you can just <kbd>M-x package-install RET
