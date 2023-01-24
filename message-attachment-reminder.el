@@ -58,6 +58,7 @@
                 "I have attached"
                 "I've attached"
                 "find attached"
+                "in the attached"
                 "see attached"
                 "see attachment"
                 "see the attachment"
@@ -69,7 +70,8 @@
                 "I've enclosed"
                 "find enclosed"
                 "see enclosed"
-                "see the enclosed"))
+                "see the enclosed"
+                "in the enclosed"))
   "Regular expression to match possible attachment reminder hints.
 When found in the composed message and there are no attachments
 present, will cause `message-attachment-reminder-warning' to be
